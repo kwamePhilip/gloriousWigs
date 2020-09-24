@@ -1,0 +1,13 @@
+.header {
+  color: white;
+  background-image: linear-gradient(#007bff70, #007bff26);
+}
+body {
+  background-color: #dbcbbd;
+  color: black;
+}
+
+footer {
+  color: black;
+  background-image: linear-gradient(#007bff70, #007bff26);
+}

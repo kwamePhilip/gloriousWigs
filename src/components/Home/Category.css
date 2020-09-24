@@ -1,0 +1,12 @@
+.catImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  width: auto;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding: 300px 300px;
+}
