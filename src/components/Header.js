@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 export default function Header(props) {
@@ -20,21 +21,20 @@ export default function Header(props) {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
+          <Link to="/" class="nav-link">
+            <li class="nav-item active">
               Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
+            </li>
+          </Link>
           <li class="nav-item">
             <a class="nav-link" href="#">
               Features
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Pricing
-            </a>
-          </li>
+          <Link to="/cat1Page" class="nav-link">
+            <li class="nav-item">Category 1 </li>
+          </Link>
+
           <li class="nav-item">
             <a
               class="nav-link disabled"

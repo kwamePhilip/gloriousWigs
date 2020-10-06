@@ -1,30 +1,22 @@
 import React from "react";
 import Header from "./components/Header";
+import HomePage from "./components/Home/HomePage";
 import Category from "./components/Home/Category";
 import Footer from "./components/Footer";
+import CatCard from "./components/CategoryPage/catCard";
+import FirstCategory from "./components/CategoryPage/cat1Page";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <Header />
-      <Category
-        backImg="linear-gradient(#007bff70, #007bff26), url(../../assets/categoryImages/cat1.png)"
-        title="Category 1 Wigs"
-        btnText="Check out more Cat1 Wigs"
-      />
-      <Category
-        backImg="linear-gradient(#007bff70, #007bff26), url(../../assets/categoryImages/cat2.png)"
-        title="Category 2 Wigs"
-        btnText="Check out more Cat2 Wigs..."
-      />
-      <Category
-        backImg="linear-gradient(#007bff70, #007bff26), url(../../assets/categoryImages/cat3.png)"
-        title="Category 3 Wigs"
-        btnText="Check out more Cat3 Wigs..."
-      />
-
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/cat1Page" component={FirstCategory} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
